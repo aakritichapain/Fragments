@@ -14,7 +14,7 @@
         android:id="@+id/tabId"
         android:background="#1E88E5"
         app:tabIndicatorHeight="2dp"
-        app:tabTextColor="#000000"
+        app:tabTextColor="#FFFFFF"
 
         />
 

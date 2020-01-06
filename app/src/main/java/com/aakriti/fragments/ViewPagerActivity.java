@@ -5,6 +5,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.provider.CalendarContract;
 import android.widget.Adapter;
 
 import com.aakriti.fragments.Adapter.ViewPagerAdapter;
@@ -27,9 +28,10 @@ public class ViewPagerActivity extends AppCompatActivity {
 
 
         tabLayout.setSelectedTabIndicatorColor(Color.parseColor("#FFFFFF"));
+        tabLayout.setTabTextColors(Color.parseColor("#727272"), Color.parseColor("#ffffff"));
         ViewPagerAdapter viewPagerAdapter= new ViewPagerAdapter(getSupportFragmentManager());
-        viewPagerAdapter.addFragment(new FirstFragment(),"SUM");
-        viewPagerAdapter.addFragment(new SecondFragment(),"Area of Circle");
+        viewPagerAdapter.addFragment(new FirstFragment(),"Load First Fragment");
+        viewPagerAdapter.addFragment(new SecondFragment(),"Load Second Fragment");
 
         viewPager.setAdapter(viewPagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
